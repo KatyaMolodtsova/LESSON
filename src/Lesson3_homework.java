@@ -9,17 +9,12 @@ public class Lesson3_homework {
 //        int[] array;
 //        array = new int[10];
 //        for (int i = 0; i < array.length; i++) {
-//            array[i] = a + (int) (Math.random() * b);
+//            array[i] = a + (int) (Math.random() * (b - a) + 1);
 //        }
-////        System.out.println(Arrays.toString(array));
 //        Arrays.sort(array);
 //        System.out.println(Arrays.toString(array));
-////        for (int i : array) {
-////            if (i == 0 || i == array.length - 1 || i == array.length / 2)
-////                System.out.println("i = " + i);
-////        }
 //        for (int i = 0; i < array.length; i++) {
-//            if (i == 0 || i == array.length - 1)// || i == array.length / 2)
+//            if (i == 0 || i == array.length - 1)
 //            System.out.println(array[i]);
 //            sred += array[i];
 //        }
@@ -30,21 +25,17 @@ public class Lesson3_homework {
 //        array = new int[10];
 //        array1 = new int[10];
 //
-//        for (int i = 0, a = 2; i <= array.length - 1; i++, a += 2) {
-//            array[i] = a;
+//        for (int i = 0, j = array1.length - 1, a = 2; i <= array.length - 1; i++, a += 2, j--) {
+//            array[j] = a;
 //        }
 //        System.out.println(Arrays.toString(array));
-//        for (int i = array.length - 1, j = 0; i >= 0; i--, j++) {
-//            array1[j] = array[i];
-//        }
-//        System.out.println(Arrays.toString(array1));
 
 //        //3
 //        int a = -1, b = 1;
 //        int[] array;
 //        array = new int[11];
 //        for (int i = 0; i < array.length; i++) {
-//            array[i] = a + (int) Math.random() * b;
+//            array[i] = b + (int) Math.random() * 3;
 //        }
 //        System.out.println(Arrays.toString(array));
     }

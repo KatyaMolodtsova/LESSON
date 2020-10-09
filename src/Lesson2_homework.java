@@ -5,35 +5,35 @@ public class Lesson2_homework {
 
 //        //1
 //        Scanner scanner = new Scanner(System.in);
-//        int num, sr, l = 1, r = 100;
+//        int sr, l = 1, r = 100, answer = 0;
 //        boolean firstCall = true;
-//        do {
+//        while (answer == 0) {
 //            if (firstCall) {
 //                System.out.println("Число меньше 1 или больше 100?");
-//                num = scanner.nextInt();
-//                if (num == 1) {
+//                answer = scanner.nextInt();
+//                if (answer == 1) {
 //                    System.out.println("Работа программы завершена. Загадано число меньше 1 или больше 100");
 //                    break;
 //                } else firstCall = false;
 //            }
-//            sr = (r + l) / 2;
+//            sr = (r + l + 1) / 2;
 //            System.out.println("Число равно " + sr + "?");
-//            num = scanner.nextInt();
-//            if (num == 1) {
+//            answer = scanner.nextInt();
+//            if (answer == 1) {
 //                System.out.println("Работа программы завершена. Загаданное число равно " + sr);
 //                break;
 //            } else {
 //                System.out.println("Число меньше " + sr + "?");
-//                num = scanner.nextInt();
-//                if (num == 1) {
+//                answer = scanner.nextInt();
+//                if (answer == 1) {
 //                    r = sr;
 //                } else {
 //                    l = sr;
 //                }
 //            }
-//       }
-//        while (true);
+//        }
 
+//        // решение на лекции
 //        Scanner scanner = new Scanner(System.in);
 //        int rnd, xx, yesNo = 0, min = 1, max = 100;
 //        rnd = (int) ((min + max + 1) / 2);
@@ -59,7 +59,9 @@ public class Lesson2_homework {
 //                n++;
 //            }
 //        }
+//
 
+//        // решение на лекции
 //        int num1 = 2;
 //        for (int num2 = 1; num2 < 20; num2++) {
 //            System.out.println(num1);
@@ -72,17 +74,16 @@ public class Lesson2_homework {
 //        }
 
 //        //4
-//        Scanner scanner = new Scanner(System.in);
-//        System.out.println("Введите целое число");
-//        int num = scanner.nextInt();
+//        int min = 10, max = 500;
+//        int num = min + (int) (Math.random() * (max - min) + 1);
 //        if (num > 25 && num < 200) //крайние значения не входят в промежуток
 //            System.out.println("Число " + num + " содержится в интервале (25;200)");
 //        else
 //            System.out.println("Число " + num + " не содержится в инте6рвале (25;200)");
-
+//
+//        // решение на лекции
 //        int min = 10;
 //        int max = 500;
-//
 //        int i = 1;
 //        while (i <= 5){
 //            int ch = min + (int) (Math.random() * (max - min) + 1);
@@ -114,6 +115,7 @@ public class Lesson2_homework {
 //                System.out.println("Вы не получили приз");
 //        }
 
+//        // решение на лекции
 //        int ticketNumber = 444;
 //        String text;
 //
@@ -138,14 +140,14 @@ public class Lesson2_homework {
 //        //6
 //        Scanner scanner = new Scanner(System.in);
 //        System.out.println("Необходимо угадать число в диапазоне [1;9]");
-// //       int num = scanner.nextInt();
+//        int num = scanner.nextInt();
 //        int a = 1, b = 9;
-//        int x = a + (int) (Math.random() * b);
+//        int x = a + (int) (Math.random() * (b - a) + 1);
 //        do {
 //            if (num == 0) {
 //                System.out.println("Введен 0. Программа завершила работу");
 //                break;
-//            } else if (num % x == 0) {
+//            } else if (num - x == 0) {
 //                System.out.println("Вы угадали");
 //                break;
 //            } else if (x - num < 0) {
