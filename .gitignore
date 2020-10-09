@@ -1,0 +1,6 @@
+# Project exclude paths
+/out/
+/src/
+ИТМО_2020.iml
+.idea
+out
