@@ -132,8 +132,8 @@ public class Lesson5 {
         System.out.println(string1.endsWith("JD"));
 
         // приведение к регистру, все символы, создание новой строки
-        string1 = string1.toLowerCase(); // верхний регистр
-        string1 = string1.toUpperCase(); // нижний регистр
+        string1 = string1.toLowerCase(); // нижний регистр
+        string1 = string1.toUpperCase(); // верхний регистр
 
         // замена
         // результат строка
