@@ -7,6 +7,14 @@ public class Teacher extends People implements TeachAble{
         super(name, age);
     }
 
+    public String getSubjectTaught() {
+        return subjectTaught;
+    }
+
+    public void setSubjectTaught(String subjectTaught) {
+        this.subjectTaught = subjectTaught;
+    }
+
     @Override
     public void teach(People teacher, People pupil) {
 

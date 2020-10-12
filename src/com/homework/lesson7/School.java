@@ -28,13 +28,13 @@ public class School {
         People[] arrayPupil = new Pupil[colP];
         People[] arrayTeacher = new Teacher[colT];
 
-        for (int i = 0; i < colT; i++) {
+        for (int i = 0; i < arrayTeacher.length; i++) {
             System.out.println("Введите имя учителя");
             String nameT = scanner.nextLine();
             System.out.println("Введите возраст учителя");
             int ageT = scanner.nextInt();
             arrayTeacher[i] = People.peopleFactory(nameT, ageT);
-
+            System.out.println("Введите предмет учителя");
         }
     }
 }

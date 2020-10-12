@@ -27,6 +27,7 @@ public class People {
 
     public static People peopleFactory(String name, int age) {
         People people = new People(name, age);
+        return people;
     }
 
     @Override
