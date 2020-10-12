@@ -22,4 +22,25 @@ abstract public class BattleUnit extends Unit implements AttackAble{
     public void run() {
         System.out.println("Реализация run BattleUnit");
     }
+
+    // возвращает объекты BattleUnit
+    public static BattleUnit unitFactory(){
+        String[] types = {"knight", "infantry"};
+        BattleUnit unit = null;
+        switch (types[(int) (Math.random() * types.length)]){
+            case "knight":
+                unit = new Knight(
+                        (int) ((Math.random() * 41) + 10),
+                        (int) ((Math.random() * 11) + 5),
+                        (int) ((Math.random() * 11) + 8));;
+                break;
+            case "infantry":
+                unit = new Infantry(
+                        (int) ((Math.random() * 41) + 20),
+                        (int) ((Math.random() * 11) + 5),
+                        (int) ((Math.random() * 1) + 5));
+                break;
+        }
+        return unit;
+    }
 }

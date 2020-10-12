@@ -27,32 +27,20 @@ public class King extends Unit {
         // первые 3 пехотинцы, остальные рыцари
         // можно BattleUnit battleUnit = new Infantry()
         // не будут доступны собственные методы, переопределенные методы будут доступны
-        if (this.gold < 250) return;
-            for (int i = 0; i < 3; i++) {
-                army[i] = new Infantry(
-                        (int) ((Math.random() * 41) + 20),
-                        (int) ((Math.random() * 11) + 5),
-                        (int) ((Math.random() * 1) + 5));
+        if (this.gold < Price.ARMY) return;
+            for (int i = 0; i < army.length; i++) {           // создавать объекты тут - плохо
+                army[i] = BattleUnit.unitFactory();
             }
-            for (int i = 3; i < army.length; i++) {
-                army[i] = new Knight(
-                        (int) ((Math.random() * 41) + 10),
-                        (int) ((Math.random() * 11) + 5),
-                        (int) ((Math.random() * 11) + 8));
-            }
-        minusGold(250);
+        minusGold(Price.ARMY);
     }
 
     // добавление юнита
     public void addUnits(){
         for (int i = 0; i < army.length; i++) {
-            if (this.gold >= 20 && !army[i].isAlive()){
-                army[i] = new Knight(
-                        (int) ((Math.random() * 41) + 10),
-                        (int) ((Math.random() * 11) + 5),
-                        (int) ((Math.random() * 1) + 8));
+            if (this.gold >= Price.UNIT && !army[i].isAlive()){
+                army[i] = BattleUnit.unitFactory();
             }
-            minusGold(20);
+            minusGold(Price.UNIT);
         }
     }
 

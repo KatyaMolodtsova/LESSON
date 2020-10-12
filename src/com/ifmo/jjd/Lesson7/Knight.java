@@ -2,7 +2,7 @@ package com.ifmo.jjd.Lesson7;
 
 public class Knight extends BattleUnit {
 
-    private int additionalAttack = 2;
+    private final int additionalAttack = 2;
 
     public Knight(int healthPoints, int agilityPoints, int attackPoints) {
         super(healthPoints, agilityPoints, attackPoints);
