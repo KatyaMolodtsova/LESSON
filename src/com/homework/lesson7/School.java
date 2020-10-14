@@ -3,38 +3,30 @@ package com.homework.lesson7;
 import java.util.Scanner;
 
 public class School {
-    public static void main(String[] args) {
 
-        final String SCHOOL_NAME;
-        int colT, colP;
+    final private String SCHOOL_NAME;
+    private Director director;
+    final private Teacher[] teachers = new Teacher[4];
+    final private Pupil[] pupils = new Pupil[8];
 
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите название школы");
-        SCHOOL_NAME = scanner.nextLine();
-
-        System.out.println("Введите имя директора");
-        String nameD = scanner.nextLine();
-        System.out.println("Введите возраст директора");
-        int ageD = scanner.nextInt();
-
-        Director director = new Director(nameD, ageD);
-
-        System.out.println("Введите количество учителей");
-        colT = scanner.nextInt();
-
-        System.out.println("Введите количество учеников в одном классе");
-        colP = scanner.nextInt();
-
-        People[] arrayPupil = new Pupil[colP];
-        People[] arrayTeacher = new Teacher[colT];
-
-        for (int i = 0; i < arrayTeacher.length; i++) {
-            System.out.println("Введите имя учителя");
-            String nameT = scanner.nextLine();
-            System.out.println("Введите возраст учителя");
-            int ageT = scanner.nextInt();
-            arrayTeacher[i] = People.peopleFactory(nameT, ageT);
-            System.out.println("Введите предмет учителя");
-        }
+    public School(String SCHOOL_NAME, Director director) {
+        this.SCHOOL_NAME = SCHOOL_NAME;
+        this.director = director;
     }
+
+    public void passDay(){
+        director.startOfClasses();
+
+        for (Teacher teacher : teachers) {
+            if (teacher != null) {
+                for (Pupil pupil : pupils) {
+                    if (pupil != null && pupil.getSubject().equalsIgnoreCase(teacher.getSubjectTaught()))
+                        teacher.teach(pupil);
+                }
+            }
+        }
+
+        director.endOfClasses();
+    }
+
 }

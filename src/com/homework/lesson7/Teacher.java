@@ -1,22 +1,20 @@
 package com.homework.lesson7;
 
 public class Teacher extends People implements TeachAble{
-    protected String subjectTaught;
+    private String subjectTaught;
+    private  int subjectLevel;
 
-    public Teacher(String name, int age) {
+    public Teacher(String name, int age, String subjectTaught) {
         super(name, age);
+        this.subjectTaught = subjectTaught;
     }
 
     public String getSubjectTaught() {
         return subjectTaught;
     }
 
-    public void setSubjectTaught(String subjectTaught) {
-        this.subjectTaught = subjectTaught;
-    }
-
     @Override
-    public void teach(People teacher, People pupil) {
-
+    public void teach(StudyAble pupil) {
+        pupil.study();
     }
 }

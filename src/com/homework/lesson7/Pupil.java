@@ -8,8 +8,12 @@ public class Pupil extends People implements StudyAble{
         super(name, age);
     }
 
-    @Override
-    public void study(People pupil, People teacher, int level, String subject, String subjectTaught) {
+    public String getSubject() {
+        return subject;
+    }
 
+    @Override
+    public void study() {
+        this.level++;
     }
 }

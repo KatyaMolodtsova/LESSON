@@ -1,6 +1,6 @@
 package com.homework.lesson7;
 
-public class People {
+abstract public class People {
     protected String name;
     protected int age;
 
@@ -16,19 +16,15 @@ public class People {
         return age;
     }
 
-    public void setAge(int age) {
-        this.age = age;
-    }
-
     public People(String name, int age) {
         this.name = name;
         this.age = age;
     }
 
-    public static People peopleFactory(String name, int age) {
-        People people = new People(name, age);
-        return people;
-    }
+//    public static People peopleFactory(String name, int age) {
+//        People people = new People(name, age);
+//        return people;
+//    }
 
     @Override
     public String toString() {
