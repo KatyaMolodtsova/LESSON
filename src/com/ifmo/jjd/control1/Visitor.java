@@ -5,7 +5,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 public class Visitor {
-    private String name, surname, gender, strDateBirth;
+    private String name, surname, gender;
     private LocalDate dateBirth;
 
     public Visitor(String name, String surname, String gender, LocalDate dateBirth) {
@@ -13,7 +13,7 @@ public class Visitor {
         setSurname(surname);
         setGender(gender);
         // приходит String вида "dd.mm.yyyy", сохраняем в dateBirth типа LocalDate
-        setDateBirth(strDateBirth);
+        setDateBirth(dateBirth);
     }
 
     public String getName() {
@@ -48,9 +48,8 @@ public class Visitor {
         return dateBirth;
     }
 
-    private void setDateBirth(String strDateBirth) {
-        if (strDateBirth == Constants.NULLDATE) throw new IllegalArgumentException("Не указана дата рождения посетителя");
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
-        this.dateBirth = LocalDate.parse(strDateBirth, formatter);
+    private void setDateBirth(LocalDate dateBirth) {
+        if (dateBirth == null) throw new IllegalArgumentException("Не указана дата рождения посетителя");
+        this.dateBirth = dateBirth;
     }
 }

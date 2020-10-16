@@ -11,5 +11,5 @@ public class Constants {
     static final String MAN = "мужчина";
     static final String WOMAN = "женщина";
     // null date
-    static final String NULLDATE = "00.00.0000";
+//    static final String NULLDATE = LocalDate.of(0000,00,00);
 }
