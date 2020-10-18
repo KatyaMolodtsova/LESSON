@@ -1,8 +1,8 @@
-package com.ifmo.jjd.control1;
+package com.control.control1;
 
-import java.nio.channels.AlreadyConnectedException;
+import com.control.control1.Constants;
+
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 
 public class Visitor {
     private String name, surname, gender;
@@ -12,7 +12,6 @@ public class Visitor {
         setName(name);
         setSurname(surname);
         setGender(gender);
-        // приходит String вида "dd.mm.yyyy", сохраняем в dateBirth типа LocalDate
         setDateBirth(dateBirth);
     }
 
