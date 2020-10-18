@@ -6,10 +6,10 @@ import java.time.LocalTime;
 public class Abonement {
     private LocalDate dateReg, dateEnd;
     private Visitor visitor;
-    private String tipeAb;
-    private int number;
+    private String tipeAb, number;
+    private String[] zones;
 
-    public Abonement(Visitor visitor, String tipeAb, int number) {
+    public Abonement(Visitor visitor, String tipeAb, String number) {
         LocalDate dateNow = LocalDate.now();
         this.dateReg = dateNow;
         setTipeAb(tipeAb, dateNow);
@@ -55,14 +55,24 @@ public class Abonement {
             case Constants.ONETIPE:
                 this.tipeAb = tipeAb;
                 this.dateEnd = dateNow;
+                zones = new String[2];
+                zones[0] = Constants.POOL;
+                zones[1] = Constants.GYM;
                 break;
             case Constants.TWOTIPE:
                 this.tipeAb = tipeAb;
                 this.dateEnd = dateNow.plusMonths(6);
+                zones = new String[2];
+                zones[0] = Constants.GROUP;
+                zones[1] = Constants.GYM;
                 break;
             case Constants.TRHEETIPE:
                 this.tipeAb = tipeAb;
                 this.dateEnd = dateNow.plusMonths(6);
+                zones = new String[3];
+                zones[0] = Constants.POOL;
+                zones[1] = Constants.GYM;
+                zones[1] = Constants.GROUP;
                 break;
         }
     }
