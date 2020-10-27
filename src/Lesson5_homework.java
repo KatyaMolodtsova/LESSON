@@ -14,13 +14,13 @@ public class Lesson5_homework {
 //        for (int i = 0; i < arrayString.length;) {
 //            System.out.println("Введите элемент массива");
 //            word = scanner.nextLine();
-//            word.trim();
+//            word = word.trim();
 //            if ("exit".equals(word)) {
 //                System.out.println("Остановка работы пользователем. Заполнение массива прервано");
 //                break;
 //            }
-//            for (int j = 0; j < arrayString.length; j++) {
-//                if (word.equals(arrayString[j])) {
+//            for (String s : arrayString) {
+//                if (word.equals(s)) {
 //                    System.out.println("Такой значение уже перисутствует в массиве. Введите другое значение");
 //                    proverka = false;
 //                    break;
@@ -57,13 +57,13 @@ public class Lesson5_homework {
 //        int ind;
 //        boolean proverka = true;
 //        String[] arrayStr = word.split("");
-//        for (int i = 0; i < word.length(); i++) {
+//        for (int i = 0; i < word.length() / 2; i++) {
 //            ind = arrayStr.length - 1 - i;
-//            if (arrayStr[i].equals(arrayStr[ind])) {
+//            if (!arrayStr[i].equals(arrayStr[ind])) {
 //                proverka = false;
-//                System.out.println("нет");
-//                break;
-//            } else System.out.println("да");
+////                System.out.println("нет");
+//                break;}
+////            } else System.out.println("да");
 //        }
 //        if (proverka)
 //            System.out.println("Слово " + word + " является палиндромом");
