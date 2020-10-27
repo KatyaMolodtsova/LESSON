@@ -31,11 +31,10 @@ public class Lesson3_homework {
 //        System.out.println(Arrays.toString(array));
 
 //        //3
-//        int a = -1, b = 1;
-//        int[] array;
-//        array = new int[11];
+//        int[] array = new int[11];
+//        int int0, int1, int11;
 //        for (int i = 0; i < array.length; i++) {
-//            array[i] = b + (int) Math.random() * 3;
+//            array[i] = (int) (Math.random() * 3) - 1;
 //        }
 //        System.out.println(Arrays.toString(array));
     }

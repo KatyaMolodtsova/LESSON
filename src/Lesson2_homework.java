@@ -5,31 +5,30 @@ public class Lesson2_homework {
 
 //        //1
 //        Scanner scanner = new Scanner(System.in);
-//        int sr, l = 1, r = 100, answer = 0;
+//        int sr, l = 1, r = 100, answer;
 //        boolean firstCall = true;
-//        while (answer == 0) {
-//            if (firstCall) {
-//                System.out.println("Число меньше 1 или больше 100?");
-//                answer = scanner.nextInt();
-//                if (answer == 1) {
-//                    System.out.println("Работа программы завершена. Загадано число меньше 1 или больше 100");
-//                    break;
-//                } else firstCall = false;
-//            }
+//        if (firstCall) {
+//            System.out.println("Число меньше 1 или больше 100?");
+//            answer = scanner.nextInt();
+//            if (answer == 1) {
+//                System.out.println("Работа программы завершена. Загадано число меньше 1 или больше 100");
+//                break;
+//            } else firstCall = false;
+//        }
+//        while (true) {
 //            sr = (r + l + 1) / 2;
 //            System.out.println("Число равно " + sr + "?");
 //            answer = scanner.nextInt();
 //            if (answer == 1) {
 //                System.out.println("Работа программы завершена. Загаданное число равно " + sr);
 //                break;
+//            }
+//            System.out.println("Число меньше " + sr + "?");
+//            answer = scanner.nextInt();
+//            if (answer == 1) {
+//                r = sr;
 //            } else {
-//                System.out.println("Число меньше " + sr + "?");
-//                answer = scanner.nextInt();
-//                if (answer == 1) {
-//                    r = sr;
-//                } else {
-//                    l = sr;
-//                }
+//                l = sr;
 //            }
 //        }
 
