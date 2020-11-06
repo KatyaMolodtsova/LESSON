@@ -22,5 +22,9 @@ public class TstProperties {
         } catch (IOException ioException) {
             ioException.printStackTrace();
         }
+
+        System.out.println(properties.getProperty("status"));
+        System.out.println(properties.getProperty("code"));
+        System.out.println(properties);
     }
 }
